@@ -23,12 +23,17 @@ config = {
 	        }
 	      }
         },
-        database: {
-            client: 'postgres',
-            connection: process.env.DATABASE_URL,
-            debug: false
-        },
-
+		database: {  
+		  client: 'postgres',
+		  connection: {
+		    host: process.env.POSTGRES_HOST,
+		    user: process.env.POSTGRES_USER,
+		    password: process.env.POSTGRES_PASSWORD,
+		    database: process.env.POSTGRES_DATABASE,
+		    port: '5432'
+		  },
+		  debug: false
+		},
         server: {
             // Host to be passed to node's `net.Server#listen()`
             host: '0.0.0.0',
