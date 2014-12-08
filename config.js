@@ -11,6 +11,7 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://hummingbird-ghost.herokuapp.com/',
+        fileStorate: false,
         mail: {
 	     transport: 'SMTP',
 	      host: 'smtp.mandrillapp.com',
